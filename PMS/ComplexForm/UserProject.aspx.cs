@@ -13,5 +13,25 @@ namespace PMS.ComplexForm
 		{
 
 		}
-	}
+
+
+        protected string GetStatusBadgeClass(string status)
+        {
+            switch (status.ToLower())
+            {
+                case "completed":
+                    return "bg-success";
+                case "in progress":
+                    return "bg-primary";
+                case "pending":
+                    return "bg-warning text-dark";
+                case "delayed":
+                    return "bg-danger";
+                case "on hold":
+                    return "bg-secondary";
+                default:
+                    return "bg-info text-dark";
+            }
+        }
+    }
 }
