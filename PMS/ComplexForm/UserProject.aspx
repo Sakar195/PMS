@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="UserProject.aspx.cs" Inherits="PMS.ComplexForm.UserProject" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <!-- Add Bootstrap CSS reference if not already in your master page -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" /> -->
+ 
     
     <div class="container mt-4">
         <div class="card shadow-sm">

@@ -12,7 +12,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -50,6 +50,7 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/BasicForm/MilestoneDetails">Milestone</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/BasicForm/ProjectDetails">Project</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/BasicForm/RoleDetails">Role</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/BasicForm/CategoryDetails">Category</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/BasicForm/SubTaskDetails">SubTask</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/BasicForm/TaskDetails">Task</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/BasicForm/UserDetails">User</a></li>
@@ -63,8 +64,8 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-        
-        
+
+
         </div>
     </form>
     <asp:PlaceHolder runat="server">

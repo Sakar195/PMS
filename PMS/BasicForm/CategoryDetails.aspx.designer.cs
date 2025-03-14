@@ -11,17 +11,17 @@ namespace PMS.BasicForm
 {
 
 
-    public partial class TaskDetails
+    public partial class CategoryDetails
     {
 
         /// <summary>
-        /// btnNewTask control.
+        /// NewCategoryButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnNewTask;
+        protected global::System.Web.UI.WebControls.LinkButton NewCategoryButton;
 
         /// <summary>
         /// GridView1 control.
@@ -51,13 +51,31 @@ namespace PMS.BasicForm
         protected global::System.Web.UI.WebControls.FormView FormView1;
 
         /// <summary>
-        /// SqlDataSource2 control.
+        /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+
+        /// <summary>
+        /// AlertPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel AlertPanel;
+
+        /// <summary>
+        /// AlertMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal AlertMessage;
 
         /// <summary>
         /// SqlDataSource1 control.
