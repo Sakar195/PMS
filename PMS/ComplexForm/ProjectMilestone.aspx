@@ -45,7 +45,7 @@
                 <div class="mt-3 text-center">
                     <div class="alert alert-info" id="performerInfo" runat="server">
                         <i class="bi bi-trophy me-2"></i>
-                        Top 3 performers based on number of completed tasks.
+                        Select a project from the dropdown to view their milestones.
                     </div>
                 </div>
             </div>
