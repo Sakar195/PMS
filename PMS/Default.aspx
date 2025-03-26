@@ -56,6 +56,67 @@
             </div>
         </div>
     </div>
+
+    <!-- Main Charts Row -->
+<div class="row mb-4">
+    <!-- Main Task Chart -->
+    <div class="col-lg-8">
+        <div class="card shadow h-100">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Task Distribution Across Projects</h5>
+            </div>
+            <div class="card-body">
+                <asp:Chart ID="ChartTaskStatus" runat="server" DataSourceID="SqlDataSourceTaskStatus"
+                    Width="550px" Height="350px" AntiAliasing="All" TextAntiAliasingQuality="High">
+                    <Series>
+                        <asp:Series Name="Completed" ChartType="StackedBar"
+                            XValueMember="Project_Name" YValueMembers="CompletedTasks"
+                            Color="#6a5acd" BorderWidth="0" />
+                        <asp:Series Name="Pending" ChartType="StackedBar"
+                            XValueMember="Project_Name" YValueMembers="PendingTasks"
+                            Color="#ff6b6b" BorderWidth="0" />
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                            <AxisX Title="Project Landscape" IsLabelAutoFit="true" LabelAutoFitStyle="WordWrap" TitleFont="Arial, 11pt" />
+                            <AxisY Title="Task Volumes" TitleFont="Arial, 11pt" />
+                            <Area3DStyle Enable3D="false" />
+                        </asp:ChartArea>
+                    </ChartAreas>
+                    <Legends>
+                        <asp:Legend Name="Legend1" Alignment="Center" Docking="Bottom" />
+                    </Legends>
+                </asp:Chart>
+            </div>
+        </div>
+    </div>
+    <!-- Milestone Timeline -->
+    <div class="col-lg-4">
+        <div class="card shadow h-100">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0">Milestone Progression Timeline</h5>
+            </div>
+            <div class="card-body">
+                <asp:Chart ID="ChartMilestoneDue" runat="server" DataSourceID="SqlDataSourceMilestoneDue"
+                    Width="350px" Height="350px" AntiAliasing="All" TextAntiAliasingQuality="High">
+                    <Series>
+                        <asp:Series Name="Series1" ChartType="Area" XValueMember="Week"
+                            YValueMembers="Count" Color="#8a4fff" MarkerStyle="Diamond" MarkerSize="10" 
+                            BorderColor="#5a2ea6" BorderWidth="3" />
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                            <AxisX Title="Weekly Horizon" TitleFont="Arial, 11pt" IsLabelAutoFit="true" LabelAutoFitStyle="WordWrap" />
+                            <AxisY Title="Milestone Count" TitleFont="Arial, 11pt" />
+                            <Area3DStyle Enable3D="false" />
+                        </asp:ChartArea>
+                    </ChartAreas>
+                </asp:Chart>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Charts Row -->
     <div class="row mb-4">
     <div class="col-md-6">
@@ -141,7 +202,63 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+
+
+
+        <div class="row mb-5">
+    <div class="col-12">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white py-3">
+                <h4 class="mb-0 fw-bold">Project Timeline Overview</h4>
+            </div>
+            <div class="card-body p-4">
+                <div class="chart-container" style="position: relative; height: 500px;">
+                    <asp:Chart ID="ChartProjectTimeline" runat="server" DataSourceID="SqlDataSourceProjectTimeline"
+                        Width="1100px" Height="600px" AntiAliasing="All" TextAntiAliasingQuality="High">
+                        <Series>
+                            <asp:Series Name="Project Timeline" ChartType="RangeBar" 
+                                XValueMember="Project_Name" YValueMembers="StartDate,EndDate"
+                                Color="#007bff" BorderColor="#0056b3" BorderWidth="2">
+                            </asp:Series>
+                        </Series>
+                        <ChartAreas>
+                            <asp:ChartArea Name="ChartArea1" BackColor="AliceBlue">
+                                <AxisX Title="Project" TitleFont="Arial, 12pt, style=Bold" 
+                                    IsLabelAutoFit="true" LabelAutoFitStyle="WordWrap" 
+                                    TitleForeColor="DarkBlue" LineWidth="2">
+                                    <LabelStyle Font="Arial, 11pt" />
+                                    <MajorGrid LineColor="LightGray" LineDashStyle="Dash" />
+                                </AxisX>
+                                <AxisY Title="Timeline" TitleFont="Arial, 12pt, style=Bold" 
+                                    IsLabelAutoFit="true" 
+                                    TitleForeColor="DarkBlue" LineWidth="2">
+                                    <LabelStyle Font="Arial, 11pt" />
+                                    <MajorGrid LineColor="LightGray" LineDashStyle="Dash" />
+                                </AxisY>
+                                <Area3DStyle Enable3D="false" />
+                            </asp:ChartArea>
+                        </ChartAreas>
+                        <Legends>
+                            <asp:Legend Name="Legend1" Alignment="Center" Docking="Bottom" 
+                                Font="Arial, 11pt" BackColor="Transparent" />
+                        </Legends>
+                        <BorderSkin SkinStyle="Emboss" BackColor="AliceBlue" />
+                    </asp:Chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<%--        <div class="col-md-6">
             <div class="card">
                 <div class="card-header bg-dark text-white">
                     <h5 class="mb-0">Task Status by Project
@@ -171,9 +288,9 @@
                     </asp:Chart>
                 </div>
             </div>
-        </div>
+        </div>--%>
     </div>
-    <div class="row mb-4">
+<%--    <div class="row mb-4">
         <div class="col-12">
             <div class="card">
                 <div class="card-header bg-dark text-white">
@@ -196,10 +313,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
 
-    <div class="row">
+    <%--<div class="row">
         <div class="col-md-6">
             <div class="card mb-4">
                 <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
@@ -269,10 +386,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
 
-    <div class="row">
+   <%-- <div class="row">
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
@@ -311,7 +428,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
+
+
 
 
     <asp:SqlDataSource ID="SqlDataSourceTaskStatusDistribution" runat="server"
@@ -348,6 +467,9 @@
                    JOIN Tasks t ON dt.t_id = t.task_id
                    JOIN Projects p ON dt.p_id = p.project_id
                    GROUP BY p.Project_Name"></asp:SqlDataSource>
+
+
+
 
     <asp:SqlDataSource ID="SqlDataSourceMilestoneDue" runat="server"
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>"      
@@ -400,5 +522,33 @@
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
         ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>"
         SelectCommand="SELECT user_id FROM Users"></asp:SqlDataSource>
-</asp:Content>
 
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server"
+    ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>"
+    SelectCommand="SELECT p.Project_Name,
+                 SUM(CASE WHEN t.Task_Status = 'Completed' THEN 1 ELSE 0 END) as CompletedTasks,
+                 SUM(CASE WHEN t.Task_Status IN ('Not Started', 'In Progress', 'On Hold') THEN 1
+                     ELSE 0 END) as PendingTasks
+           FROM (
+               SELECT DISTINCT p_id, t_id
+               FROM User_Project_Task
+           ) dt
+           JOIN Tasks t ON dt.t_id = t.task_id
+           JOIN Projects p ON dt.p_id = p.project_id
+           GROUP BY p.Project_Name">
+</asp:SqlDataSource>
+
+
+     <asp:SqlDataSource ID="SqlDataSourceProjectTimeline" runat="server"
+     ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+     ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>"
+     SelectCommand="SELECT Project_Name, 
+                      Project_Start_Date as StartDate, 
+                      Project_Due_Date as EndDate
+                FROM Projects
+                WHERE Status != 'Completed'
+                ORDER BY Project_Start_Date">
+ </asp:SqlDataSource>
+</asp:Content>
