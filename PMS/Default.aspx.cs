@@ -51,25 +51,7 @@ namespace PMS
             }
         }
 
-        //// Handle GridView pagination events
-        //protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        //{
-        //    GridView1.PageIndex = e.NewPageIndex;
-        //    GridView1.DataBind();
-        //}
-
-        //protected void GridView2_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        //{
-        //    GridView2.PageIndex = e.NewPageIndex;
-        //    GridView2.DataBind();
-        //}
-
-        //protected void GridView3_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        //{
-        //    GridView3.PageIndex = e.NewPageIndex;
-        //    GridView3.DataBind();
-        //}
-
+        
         protected string GetStatusBadgeClass(string status)
         {
             switch (status)

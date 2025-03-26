@@ -121,7 +121,6 @@
     <Content Include="BasicForm\MilestoneDetails.aspx" />
     <Content Include="BasicForm\ProjectDetails.aspx" />
     <Content Include="BasicForm\RoleDetails.aspx" />
-    <Content Include="BasicForm\SubTaskDetails - Copy.aspx" />
     <Content Include="BasicForm\SubTaskDetails.aspx" />
     <Content Include="BasicForm\TaskDetails.aspx" />
     <Content Include="BasicForm\UserDetails.aspx" />
@@ -239,13 +238,6 @@
     </Compile>
     <Compile Include="BasicForm\RoleDetails.aspx.designer.cs">
       <DependentUpon>RoleDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BasicForm\SubTaskDetails - Copy.aspx.cs">
-      <DependentUpon>SubTaskDetails - Copy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BasicForm\SubTaskDetails - Copy.aspx.designer.cs">
-      <DependentUpon>SubTaskDetails - Copy.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasicForm\SubTaskDetails.aspx.cs">
       <DependentUpon>SubTaskDetails.aspx</DependentUpon>
